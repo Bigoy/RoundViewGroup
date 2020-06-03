@@ -2,7 +2,17 @@
 RoundConstraintLayout是一个继承自ConstraintLayout并实现统一圆角功能的ViewGroup，因此不管子View什么样子都能统一实现圆角。
 
 ## 如何使用
-暂无
+```
+repositories {
+	...
+	maven { url 'https://jitpack.io' }
+}
+```
+```
+dependencies {
+	implementation 'com.github.Bigoy:RoundViewGroup:1.0.0'
+}
+```
 
 ## 效果预览
 ![preview](https://github.com/Bigoy/RoundViewGroup/blob/master/%E5%9C%86%E8%A7%92%E5%B8%83%E5%B1%80%E9%A2%84%E8%A7%88.png)
