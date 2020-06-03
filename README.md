@@ -5,6 +5,7 @@ RoundConstraintLayout是一个继承自ConstraintLayout并实现统一圆角功�
 暂无
 
 ## 效果预览
+![preview](https://github.com/Bigoy/RoundViewGroup/blob/master/%E5%9C%86%E8%A7%92%E5%B8%83%E5%B1%80%E9%A2%84%E8%A7%88.png)
 
 ## 支持设置的效果
 设置ViewGroup四个角的独立圆角大小
