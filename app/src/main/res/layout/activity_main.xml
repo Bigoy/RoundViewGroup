@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--圆角ViewGroup演示-->
+    <com.bigoy.lib.RoundConstraintLayout
+        android:id="@+id/roundConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="24dp"
+        app:cl_borderColor="#FBC02D"
+        app:cl_borderWidth="4dp"
+        app:cl_cornerRadius_leftBottom="10dp"
+        app:cl_cornerRadius_leftTop="32dp"
+        app:cl_cornerRadius_rightBottom="32dp"
+        app:cl_cornerRadius_rightTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--Demo演示方便，采用文本硬编码，实际开发中请不要这样写-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:text="子View1号"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <!--Demo演示方便，采用文本硬编码，实际开发中请不要这样写-->
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#E64A19"
+            android:gravity="center"
+            android:text="子View2号"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <!--Demo演示方便，采用文本硬编码，实际开发中请不要这样写-->
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="20dp"
+            android:background="#388E3C"
+            android:gravity="center"
+            android:text="子View3号"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+    </com.bigoy.lib.RoundConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:overScrollMode="never"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:scrollbars="none"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roundConstraintLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Demo演示方便，采用文本硬编码，实际开发中请不要这样写-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="上滑可以查看更多"
+                android:textColor="#939393"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="简介："
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="RoundConstraintLayout是一个继承自ConstraintLayout并实现统一圆角功能的ViewGroup，因此不管子View什么样子都能统一实现圆角。 其它的ViewGroup圆角可以依葫芦画瓢。"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="支持设置的效果："
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="设置View四个角的独立圆角大小。"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="设置内边框：大小、颜色。"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="相比clipPath()方式，本布局支持抗锯齿。"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="使用注意："
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:text="不要调用设置背景的任何方法，且设置的背景不会生效。"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundConstraintLayout">
+        <attr name="cl_cornerRadius" format="dimension" />
+        <attr name="cl_cornerRadius_leftTop" format="dimension" />
+        <attr name="cl_cornerRadius_leftBottom" format="dimension" />
+        <attr name="cl_cornerRadius_rightTop" format="dimension" />
+        <attr name="cl_cornerRadius_rightBottom" format="dimension" />
+        <attr name="cl_borderWidth" format="dimension" />
+        <attr name="cl_borderColor" format="color" />
+    </declare-styleable>
+</resources>
